@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text" placeholder="nhap so">
+<button onclick="nhap()" type="button" id="add">ADD</button>
+<button  onclick="hien()" type="button" id="display"> DISPLAY</button>
+<div id ="dayso"></div>
+<script>
+    let arr = [];
+    let a = 0;
+    function nhap() {
+     arr[a] =document.getElementById('text').value;
+        a++;
+     document.getElementById('text').value= "";
+
+    }
+    function hien() {
+        let b = '<hr/>'
+        for (let i = 0; i < arr.length; i++) {
+             b += 'nguyento'+ i +'='+ arr[i] + '<br>'; console.log(b)
+        };
+        document.getElementById("dayso").innerHTML= b
+    }
+</script>
+</body>
+</html>
